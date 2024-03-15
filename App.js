@@ -24,15 +24,18 @@ export default function App() {
 }
 function HomeScreen({ navigation }) {
   const [existingData, setExistingData] = useState(null); 
-    
+  const dummydata=[
+    {name:"John",marks:"45"},
+    {name:"Aryan",marks:"49"}
+  ]
   const fetchData = async () => {
-    try {
+    // try {
       const data = await AsyncStorage.getItem('studentData');
-      setExistingData(data ? JSON.parse(data) : []);
+      setExistingData(data ? JSON.parse(data) : dummydata);
       // console.log('Existing Data:', existingData);
-    } catch (error) {
-      console.error('Error retrieving data:', error);
-    }
+    // } catch (error) {
+      // console.error('Error retrieving data:', error);
+    // }
   };
   const clearLocalStorage = async () => {
     try {
