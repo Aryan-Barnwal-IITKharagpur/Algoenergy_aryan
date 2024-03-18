@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "aryan",
-    "slug": "aryan",
+    "name": "21EE10020 App",
+    "slug": "21EE10020-App",
+    "description": "This is an awesome app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,7 +22,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.aryan"
     },
     "web": {
       "favicon": "./assets/favicon.png"
