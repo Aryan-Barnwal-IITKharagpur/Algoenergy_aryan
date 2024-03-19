@@ -4,6 +4,7 @@ import { View, Switch, Button, StyleSheet } from 'react-native';
 
 import { Svg, G, Line, Rect, Text } from 'react-native-svg';
 import * as d3 from 'd3';
+import { FIREBASE_AUTH } from '../FirebaseConfig';
 
 const GRAPH_MARGIN = 15;
 const GRAPH_BAR_WIDTH = 20;
@@ -178,6 +179,9 @@ function HomeScreen({ route, navigation }) {
 
       <View style={styles.gap} />
       <Button title="ABOUT" onPress={() => navigation.navigate('About')} />
+
+      <View style={styles.gap} />
+      <Button title="LOGOUT" onPress={() => FIREBASE_AUTH.signOut()} />
     </View>
   );
 }
